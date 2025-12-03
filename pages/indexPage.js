@@ -10,7 +10,7 @@ export class IndexPage {
     await this.page.goto(indexPageLocators.joinURL);
     await this.page.waitForSelector('text=Select your country', { timeout: 20000 });
     await this.page.locator(indexPageLocators.USLable).click()
-    await this.page.waitForSelector('text=Create an account, or sign in.', { timeout: 10000 });
+    await this.page.waitForSelector('text=Create an account, or sign in.', { timeout: 20000 });
     await this.page.waitForSelector(indexPageLocators.neweXpRealtyAgentLable);
     await this.page.locator(indexPageLocators.firstNameXPath).fill(agentData.firstName);
     await this.page.locator(indexPageLocators.lastNameXPath).fill(agentData.lastName);

@@ -26,3 +26,26 @@ export const loginPageLocators = {
   passwordFieldXPath: "//input[@placeholder='Password']",
   signInButtonXPath: "//button[@id='loginButton']",
 };
+
+export const personalPageLocators = {
+
+  testName: "Agen ",
+  personalPageHeaderXPath: 'Personal Information (Step 1 of 6)',
+  letsGoXPathButton: '//button[text()="Let\'s Go!"]',
+  mailingAddLine1XPath: '//input[@Placeholder="Mailing address line 1"]',
+  cityXPath: '//input[@placeholder="City"]',
+  stateDropdownXPath: '//select[option[text()="-- State --"]]',
+  ArizonaXPath: "//option[text()='Arizona']",
+  zipCodeXPath: '//input[@placeholder="Zip/Postal code"]',
+  emergencyContactNameXPath: '//input[@placeholder="Emergency Contact Name*"]',
+  relationshipTContractorXpath: '//input[@placeholder="Relationship to Contractor*"]',
+  emergencyContactPhoneXPath: '//input[@placeholder="Emergency Contact Phone Number*"]',
+  emergencyContactEmailXPath: '//input[@placeholder="Emergency Contact Email Address*"]',
+  checkBox1Xpath: '.mx-name-eaf86e0ed3bf4720bb602ca04ff61fca div:nth-child(2)',
+ WhatbringsyoutoeXpRealtyXpah: "//button[@title='None Selected']",
+ selectAllXPath: "//input[@value='multiselect-all']",
+ saveAndContinueButtonXPath: '.mx-name-c5dc692b26364015864fdaec9047143d',
+
+
+  // "
+};
