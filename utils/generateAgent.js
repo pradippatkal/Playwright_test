@@ -10,13 +10,13 @@ function generateName() {
   }
   return name.substring(0, Math.floor(Math.random() * (8 - 6 + 1)) + 6);
 }
-
 function generateINPhone() {
   const randDigit = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-  const first = randDigit(5, 9);
-  const rest = Array.from({ length: 9 }, () => randDigit(0, 9)).join('');
-  return `${first}${rest}`;
+  const firstDigit = randDigit(7, 9);
+  const restDigits = Array.from({ length: 9 }, () => randDigit(0, 9)).join('');
+  return `${firstDigit}${restDigits}`;
 }
+
 
 function generateUSAddress() {
   const streets = [
@@ -36,13 +36,13 @@ function generateUSCity() {
     "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose",
     "Austin", "Jacksonville", "Columbus", "Indianapolis", "Charlotte",
     "Seattle", "Denver", "Boston", "Nashville", "Baltimore"
-  ]; 
+  ];
   return cities[Math.floor(Math.random() * cities.length)];
 }
 
 const firstName = generateName()
 const lastName = generateName()
-const emergencyContactName = "Raja Kumar"; 
+const emergencyContactName = "Raja Kumar";
 const relationshipToContractor = "Friend";
 const emergencyContactEmail = "johndoe235@mail.com".toLowerCase();
 
@@ -51,7 +51,7 @@ export const agentData = {
   lastName: lastName,
   email: `${firstName}.${lastName}@mail.com`.toLowerCase(),
   fullName: `${firstName} ${lastName}`,
-  emergencyContactName: emergencyContactName, 
+  emergencyContactName: emergencyContactName,
   relationshipToContractor: relationshipToContractor,
   emergencyContactemail: emergencyContactEmail,
   emergencyContactPhone: generateINPhone(),
@@ -66,7 +66,7 @@ export const sponsorData = {
   sponsorLastName: "Anderson",
   sponsorFullName: "ian Anderson",
   sponsorEmail: "ian.anderson@exprealty.com",
-   
+
 };
 
 
