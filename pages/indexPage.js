@@ -9,6 +9,10 @@ export class IndexPage {
   async createNewAgent(agentData, indexPageLocators) {
     await this.page.goto(indexPageLocators.joinURL);
     await this.page.waitForSelector('text=Select your country', { timeout: 20000 });
+    if (await this.page.locator(indexPageLocators.Cookeis).isVisible()) {
+      await this.page.locator(indexPageLocators.Cookeis).click();
+    }
+    
     await this.page.locator(indexPageLocators.USLable).click()
     await this.page.waitForSelector('text=Create an account, or sign in.', { timeout: 20000 });
     await this.page.waitForSelector(indexPageLocators.neweXpRealtyAgentLable);
@@ -32,6 +36,6 @@ export class IndexPage {
       email: agentData.email,
       password: "Overstuff8-Maximize-Choking"
     };
-
+    
   }
 }

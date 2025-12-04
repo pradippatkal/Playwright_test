@@ -61,5 +61,13 @@ export const agentData = {
   zipCode: '85001',
 };
 
+export const sponsorData = {
+  sponsorFirstName: "ian",
+  sponsorLastName: "Anderson",
+  sponsorFullName: "ian Anderson",
+  sponsorEmail: "ian.anderson@exprealty.com",
+   
+};
+
 
 

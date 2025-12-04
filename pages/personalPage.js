@@ -22,9 +22,19 @@ export class PersonalPage {
     await this.page.locator(personalPageLocators.relationshipTContractorXpath).fill(personalData.relationshipToContractor);
     await this.page.locator(personalPageLocators.emergencyContactPhoneXPath).fill(personalData.emergencyContactPhone);
     await this.page.locator(personalPageLocators.emergencyContactEmailXPath).fill(personalData.emergencyContactemail);
-    await this.page.locator(personalPageLocators.checkBox1Xpath).click();
     await this.page.locator(personalPageLocators.WhatbringsyoutoeXpRealtyXpah).click();
     await this.page.locator(personalPageLocators.selectAllXPath).check();
-    await this.page.locator(personalPageLocators.saveAndContinueButtonXPath).click(); 
+    await this.page.locator(personalPageLocators.checkBox1Xpath).click();
+    await this.page.locator(personalPageLocators.saveAndContinueButtonXPath).click();
+    
+    if (await this.page.locator('Please consider using the original address or re-enter a valid address').isVisible()) {
+       
+      await this.page.locator(personalPageLocators.useOriginalAddress).click();
+      //await this.page.locator('text=Sponsor Information (Step 2 of 6)').waitFor();
+       console.log("Personal Page details filled successfully.");
+    }
+    else {
+      console.log("something is wrong in Personal Page details filling.");
+    }
   }
 }

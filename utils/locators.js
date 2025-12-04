@@ -4,6 +4,7 @@
 export const indexPageLocators = {
   testName: "USJoinApp - agentRegistration",
   joinURL: 'https://joinapp-accp.exprealty.com/index.html',
+  Cookeis:'//button[text()="Accept All"]',
   USLable: '.mx-name-ee1f139b85314830aac88c74dea4102a',
   neweXpRealtyAgentLable: '.mx-name-text6',
   firstNameXPath: '.mx-name-USResidential_Input_FirstName input',
@@ -29,7 +30,6 @@ export const loginPageLocators = {
 
 export const personalPageLocators = {
 
-  testName: "Agen ",
   personalPageHeaderXPath: 'Personal Information (Step 1 of 6)',
   letsGoXPathButton: '//button[text()="Let\'s Go!"]',
   mailingAddLine1XPath: '//input[@Placeholder="Mailing address line 1"]',
@@ -44,8 +44,23 @@ export const personalPageLocators = {
   checkBox1Xpath: '.mx-name-eaf86e0ed3bf4720bb602ca04ff61fca div:nth-child(2)',
  WhatbringsyoutoeXpRealtyXpah: "//button[@title='None Selected']",
  selectAllXPath: "//input[@value='multiselect-all']",
+  outside: '//span[text()="Are you an eXp Realty Corporate Staff member?"]',
  saveAndContinueButtonXPath: '.mx-name-c5dc692b26364015864fdaec9047143d',
+ useOriginalAddress : '.mx-name-b3d25102636f4a1e89f20f9fd07bb8f9',
 
 
   // "
 };
+
+ export const sponsorPageSelector = {
+    sponsorPageHeaderXPath: 'Sponsor Information (Step 2 of 6)',
+    understandTheSponsorshipPolicy:'.mx-name-VideoAcknowledgementResidential',
+    SelectOrDeclineSponsorButton : '.mx-name-o9de890050724b62b5b8813549e45154',
+    sponsorEXPEmailInputBox : '//input[@id="88.SponsorManagement.Applicant_SponsorSelect_XD.textBox4_pso_7"]',
+    SearchSponsorButton : '//button[text()="Search"]',
+    selectSponsor: '//button[text()="Select"]',
+    proceedButton: '//button[text()="Proceed"]',
+    radioButtonYes : "//label[text()='Yes']",
+    saveAndContinueButtonXPath: ".mx-name-SwobSaveAndContinue",
+
+ };
