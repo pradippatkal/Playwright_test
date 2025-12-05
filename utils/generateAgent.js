@@ -10,12 +10,33 @@ function generateName() {
   }
   return name.substring(0, Math.floor(Math.random() * (8 - 6 + 1)) + 6);
 }
-function generateINPhone() {
-  const randDigit = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-  const firstDigit = randDigit(7, 9);
-  const restDigits = Array.from({ length: 9 }, () => randDigit(0, 9)).join('');
-  return `${firstDigit}${restDigits}`;
+// function generateINPhone() {
+//   const randDigit = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+//   const firstDigit = randDigit(7, 9);
+//   const restDigits = Array.from({ length: 9 }, () => randDigit(0, 9)).join('');
+//   return `${firstDigit}${restDigits}`;
+// }
+
+const generatedSet = new Set();
+ 
+function generateINPhone(min, max) {
+  const minNum = Number(min);
+  const maxNum = Number(max);
+
+  // If all numbers are used, return null
+  if (generatedSet.size >= (maxNum - minNum + 1)) {
+    return null;
+  }
+
+  let rand;
+  do {
+    rand = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+  } while (generatedSet.has(rand));
+
+  generatedSet.add(rand);
+  return String(rand);
 }
+
 
 
 function generateUSAddress() {
@@ -54,8 +75,8 @@ export const agentData = {
   emergencyContactName: emergencyContactName,
   relationshipToContractor: relationshipToContractor,
   emergencyContactemail: emergencyContactEmail,
-  emergencyContactPhone: generateINPhone(),
-  phone: generateINPhone(),
+  emergencyContactPhone: generateINPhone(9195511000,9195588999),
+  phone: generateINPhone(9195511000,9195588999),
   mailingAddressLine1: generateUSAddress(),
   city: generateUSCity(),
   zipCode: '85001',

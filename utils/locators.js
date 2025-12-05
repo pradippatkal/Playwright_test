@@ -1,6 +1,4 @@
 
-
-
 export const indexPageLocators = {
   testName: "USJoinApp - agentRegistration",
   joinURL: 'https://joinapp-accp.exprealty.com/index.html',
@@ -20,6 +18,7 @@ export const indexPageLocators = {
   createAccountButtonXPath: '.mx-name-container18 button',
   successLable: 'Awesome! You have successfully created your account.',
 };
+
 export const loginPageLocators = {
   testName: "Login As New Agent",
   joinLoginURL: "https://joinapp-accp.exprealty.com/login.html",
@@ -29,7 +28,6 @@ export const loginPageLocators = {
 };
 
 export const personalPageLocators = {
-
   personalPageHeaderXPath: 'Personal Information (Step 1 of 6)',
   letsGoXPathButton: '//button[text()="Let\'s Go!"]',
   mailingAddLine1XPath: '//input[@Placeholder="Mailing address line 1"]',
@@ -42,25 +40,34 @@ export const personalPageLocators = {
   emergencyContactPhoneXPath: '//input[@placeholder="Emergency Contact Phone Number*"]',
   emergencyContactEmailXPath: '//input[@placeholder="Emergency Contact Email Address*"]',
   checkBox1Xpath: '.mx-name-eaf86e0ed3bf4720bb602ca04ff61fca div:nth-child(2)',
- WhatbringsyoutoeXpRealtyXpah: "//button[@title='None Selected']",
- selectAllXPath: "//input[@value='multiselect-all']",
+  WhatbringsyoutoeXpRealtyXpah: "//button[@title='None Selected']",
+  selectAllXPath: "//input[@value='multiselect-all']",
   outside: '//span[text()="Are you an eXp Realty Corporate Staff member?"]',
- saveAndContinueButtonXPath: '.mx-name-c5dc692b26364015864fdaec9047143d',
- useOriginalAddress : '.mx-name-b3d25102636f4a1e89f20f9fd07bb8f9',
-
-
-  // "
+  saveAndContinueButtonXPath: '.mx-name-c5dc692b26364015864fdaec9047143d',
+  useOriginalAddress : '.mx-name-b3d25102636f4a1e89f20f9fd07bb8f9',
 };
 
  export const sponsorPageSelector = {
     sponsorPageHeaderXPath: 'Sponsor Information (Step 2 of 6)',
     understandTheSponsorshipPolicy:'.mx-name-VideoAcknowledgementResidential',
     SelectOrDeclineSponsorButton : '.mx-name-o9de890050724b62b5b8813549e45154',
-    sponsorEXPEmailInputBox : '//input[@id="88.SponsorManagement.Applicant_SponsorSelect_XD.textBox4_pso_7"]',
+    sponsorEXPEmailInputBox : "//div[contains(@class,'mx-name-textBox4 xd-search-input')]//input",
     SearchSponsorButton : '//button[text()="Search"]',
     selectSponsor: '//button[text()="Select"]',
     proceedButton: '//button[text()="Proceed"]',
-    radioButtonYes : "//label[text()='Yes']",
+    yesButton:'//input[@value="Yes"]',
+    xyx:'//input[@value="Yes"]',
     saveAndContinueButtonXPath: ".mx-name-SwobSaveAndContinue",
-
  };
+
+  export const licensePageLocators = {
+    licensePageHeaderXPath: '.mx-name-PrimaryLicense_Text1_Desktop',
+    licenseDurationDropdownXPath: ' .mx-name-PrimaryLicense_Dropdown1_Desktop select',
+    licenseNumberXpath: 'mx-name-PrimaryLicense_Textbox2_Desktop_US input',
+    selectPrimaryAssociationDropdownXPath: 'mx-name-PrimaryLicense_Selector1_Desktop_US',
+    anyAdditionalAssociationXPath: "//span[normalize-space()='Are you associated with any additional Associations?']/following::label[normalize-space()='No'][1]",
+    pleaseSelectTheMlsYouArePrimarilyAffiliatedWithXpath: "//select[id*='PrimaryLicense_Selector2_Desktop_US']",
+    //primaryMlsNotListedAboveCheckHere: 
+
+
+  };

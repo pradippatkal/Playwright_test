@@ -26,15 +26,32 @@ export class PersonalPage {
     await this.page.locator(personalPageLocators.selectAllXPath).check();
     await this.page.locator(personalPageLocators.checkBox1Xpath).click();
     await this.page.locator(personalPageLocators.saveAndContinueButtonXPath).click();
-    
-    if (await this.page.locator('Please consider using the original address or re-enter a valid address').isVisible()) {
-       
-      await this.page.locator(personalPageLocators.useOriginalAddress).click();
-      //await this.page.locator('text=Sponsor Information (Step 2 of 6)').waitFor();
-       console.log("Personal Page details filled successfully.");
-    }
-    else {
-      console.log("something is wrong in Personal Page details filling.");
-    }
+    console.log("testing");
+//     if (await this.page.locator('text=Use Original Address').isVisible()) {
+//     await this.page.locator(personalPageLocators.useOriginalAddress).click();
+//     console.log("Using Original Address...");
+// }
+    try {
+    // 1. Define the button locator
+    // It's safer to use the exact text or the variable you already created
+    const originalAddressBtn = this.page.locator('text=Use Original Address');
+
+    // 2. Wait up to 5 seconds for it to become visible
+    // If it doesn't appear in 5s, it throws an error and jumps to 'catch'
+    await originalAddressBtn.waitFor({ state: 'visible', timeout: 5000 });
+
+    // 3. If we are here, the button exists and is visible. Click it.
+    await originalAddressBtn.click();
+    console.log("Using Original Address...");
+
+} catch (e) {
+    // 4. If the popup didn't appear within 5 seconds, just ignore and continue
+    console.log("Address popup did not appear, proceeding...");
+}
+   
+
+    if (await this.page.locator('text=Sponsor Information (Step 2 of 6)').isVisible()) {
+    console.log("Personal Page details filled successfully.");
   }
+}
 }
