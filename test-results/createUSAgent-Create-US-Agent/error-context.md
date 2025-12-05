@@ -18,11 +18,11 @@
           - text: Log Out
     - generic [ref=e21]:
       - generic [ref=e24]:
-        - generic [ref=e30]: "Information: You are working on the Acceptance-Environment [30.00] | Version: 2025.11.1.8953 (11/5/2025, 10:42 PM)"
+        - generic [ref=e30]: "Information: You are working on the Acceptance-Environment [30.00] | Version: 2025.12.1.8982 (11/25/2025, 2:00 AM)"
         - table [ref=e34]:
           - rowgroup [ref=e38]:
-            - row "Welcome Back, Tomashi Retopa! PROFILE" [ref=e39]:
-              - cell "Welcome Back, Tomashi Retopa!" [ref=e40]
+            - row "Welcome Back, Malojo Nonofa! PROFILE" [ref=e39]:
+              - cell "Welcome Back, Malojo Nonofa!" [ref=e40]
               - cell "PROFILE" [ref=e41]:
                 - button "PROFILE" [active] [ref=e42] [cursor=pointer]
       - generic [ref=e47]:
@@ -111,20 +111,14 @@
               - rowgroup [ref=e125]:
                 - row "Your Personal Code" [ref=e126]:
                   - cell "Your Personal Code" [ref=e127]
-            - text: 0A749FE100
+            - text: 2D80D5E6B9
           - generic [ref=e128]:
             - table [ref=e130]:
               - rowgroup [ref=e133]:
                 - row "Onboarding Status Tracker" [ref=e134]:
                   - cell "Onboarding Status Tracker" [ref=e135]
             - iframe [ref=e139]:
-              - generic [ref=f1e7]:
-                - heading "Onboarding Status" [level=1] [ref=f1e8]
-                - heading "Please enter your personal code here for a current onboarding status." [level=3] [ref=f1e9]
-                - generic [ref=f1e11]:
-                  - textbox [ref=f1e12]
-                  - button "RETRIEVE" [ref=f1e13] [cursor=pointer]:
-                    - generic [ref=f1e14]: RETRIEVE
+              
         - generic [ref=e146]:
           - generic [ref=e148]:
             - table [ref=e149]:
@@ -150,24 +144,7 @@
                 - row "Need help? Contact Us!" [ref=e180]:
                   - cell "Need help? Contact Us!" [ref=e181]
             - button [ref=e182] [cursor=pointer]
-  - generic:
-    - generic [ref=e184]:
-      - paragraph [ref=e186]:
-        - text: We use
-        - link "cookies" [ref=e187] [cursor=pointer]:
-          - /url: https://allaboutcookies.org/
-        - text: to enhance your browsing experience, analyze your activity, understand your preferences, improve our services, and deliver relevant ads. By making your cookie choice, you also confirm your acknowledgement and consent to our
-        - link "Terms" [ref=e188] [cursor=pointer]:
-          - /url: https://expworldholdings.com/terms-of-service/
-        - text: and
-        - link "Privacy Policy" [ref=e189] [cursor=pointer]:
-          - /url: https://expworldholdings.com/privacy-policy/#:~:text=Types%20of%20Information%20Collected
-        - text: .
-      - generic [ref=e190]:
-        - button "Accept All" [ref=e191] [cursor=pointer]
-        - button "Reject" [ref=e192] [cursor=pointer]
-        - button "Customize" [ref=e193] [cursor=pointer]
-    - complementary "Open Cookie Preferences Modal" [ref=e194]:
-      - button "Cookie Preferences, opens a dedicated popup modal window" [ref=e195] [cursor=pointer]:
-        - img "Cookie Preferences" [ref=e196]
+  - complementary "Open Cookie Preferences Modal" [ref=e183]:
+    - button "Cookie Preferences, opens a dedicated popup modal window" [ref=e184] [cursor=pointer]:
+      - img "Cookie Preferences" [ref=e185]
 ```
