@@ -91,4 +91,21 @@ export const sponsorData = {
 };
 
 
+//future date generation trying purpose code 
+function getFutureDate(daysAhead = 1, format = "MM/DD/YYYY") {
+  const date = new Date();
+  date.setDate(date.getDate() + daysAhead);
+
+  const dd = String(date.getDate()).padStart(2, "0");
+  const mm = String(date.getMonth() + 1).padStart(2, "0");
+  const yyyy = date.getFullYear();
+
+  if (format === "DD/MM/YYYY") return `${dd}/${mm}/${yyyy}`;
+  if (format === "YYYY-MM-DD") return `${yyyy}-${mm}-${dd}`;
+  
+  // Default MM/DD/YYYY
+  return `${mm}/${dd}/${yyyy}`;
+}
+
+
 
